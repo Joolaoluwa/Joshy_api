@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Joshy_api.Extensions
-{
+namespace Joshy_api.Extensions;
+
     public static class ServiceExtensions
     {
         public static void ConfigureCors(this IServiceCollection services) =>
@@ -16,4 +16,3 @@ namespace Joshy_api.Extensions
             .AllowAnyHeader());
         });
     }
-}
