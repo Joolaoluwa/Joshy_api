@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ajFZ6izQtwtbjvrpyCaZiIeJ7Ag9AifFDzUh+PJQjUakf/zyYIyMUC12SlnljKpBdnbELDPRW4EdTZUZ29oO+Q==",
+  "dgSpecHash": "QxUuDAuMw3iAMAIFufUc4Nas2hENSi2b3h6ca2gSaZB3eTNU3OHeBLOw7iRo+5hof6APSGSyKmm2D7RlLt6WjQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joshua\\Desktop\\My_folders\\Joshy's_store_api\\Joshy_api\\Joshy_api.csproj",
   "expectedPackageFiles": [
@@ -43,7 +43,9 @@
     "C:\\Users\\Joshua\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\mysql.data\\8.0.22\\mysql.data.8.0.22.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\mysql.data.entityframeworkcore\\8.0.22\\mysql.data.entityframeworkcore.8.0.22.nupkg.sha512",
+    "C:\\Users\\Joshua\\.nuget\\packages\\mysqlconnector\\2.3.1\\mysqlconnector.2.3.1.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
+    "C:\\Users\\Joshua\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.0-beta.2\\pomelo.entityframeworkcore.mysql.8.0.0-beta.2.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\runtime.native.system.io.compression\\4.1.0\\runtime.native.system.io.compression.4.1.0.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\runtime.native.system.net.http\\4.0.1\\runtime.native.system.net.http.4.0.1.nupkg.sha512",
