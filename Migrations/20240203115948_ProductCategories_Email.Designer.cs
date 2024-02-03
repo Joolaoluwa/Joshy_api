@@ -3,6 +3,7 @@ using System;
 using Joshy_api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Joshy_api.Migrations
 {
     [DbContext(typeof(JoshyDbContext))]
-    partial class JoshyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240203115948_ProductCategories_Email")]
+    partial class ProductCategories_Email
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

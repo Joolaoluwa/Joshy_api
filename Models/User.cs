@@ -12,6 +12,7 @@ namespace Joshy_api.Models
         public required string Age {get; set;}
         public required string PhoneNumber{get; set;}
         public required string Address{get; set;}
+        public required string Email{get; set;}
         public IEnumerable<Order>? Order
         {
             get;
