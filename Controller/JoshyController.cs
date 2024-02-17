@@ -3,21 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Joshy_api.Data;
-using Joshy_api.Models
+using Joshy_api.Models;
+using Microsoft.AspNetCore.Mvc;
+using Joshy_api.Repository;
 
-namespace Joshy_api.Controller
-{
+namespace Joshy_api.Controller;
+
+    [Route("/OnX")]
     [ApiController]
-    [Route("api/[Joshies]")]
     public class JoshyController : ControllerBase
     {
-        [HttpGet]
-        public async Task<IActionResult> GetProducts()
+        private readonly OnXRepository _repo;
+        public JoshyController(OnXRepository repo)
         {
-             var products = new List<>()
-             new {
-
-             }
+            _repo = repo;
         }
+
+        [HttpGet]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<User>))]
+        public IActionResult GetUser()
+        {
+            var users = _repo.GetUsers();
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(users);
+        }
+
     }
-}
