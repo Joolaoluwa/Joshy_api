@@ -8,7 +8,11 @@ namespace Joshy_api.Interface
 {
     public interface IOnXInterface
     {
-        ICollection<User> GetUsers();
+        public ICollection<User> GetUsers();
+        public User ?GetUser(Guid id);
+        public User ?GetUser(string name);
+       public  decimal ?Price(Guid userId);
+        public bool UserExists(Guid userId);
         
     }
 }

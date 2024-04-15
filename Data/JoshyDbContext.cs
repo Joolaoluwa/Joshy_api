@@ -17,5 +17,10 @@ namespace Joshy_api.Data
         public DbSet<OrderDetails> OrderDetails{get; set;}
         public DbSet<Products> Products{get; set;}
 
+        protected override void OnModelCreating(ModelBuilder modelbuilder)
+        {
+            
+        }
+
     }
 }

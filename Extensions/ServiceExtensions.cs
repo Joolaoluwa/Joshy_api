@@ -7,12 +7,14 @@ namespace Joshy_api.Extensions;
 
     public static class ServiceExtensions
     {
-        public static void ConfigureCors(this IServiceCollection services) =>
-        services.AddCors(options =>
+        public static void ConfigureCors(this IServiceCollection services)
         {
-            options.AddPolicy("CorsPolicy", builder => 
-            builder.AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
-        });
+            services.AddCors(myoptions =>
+            {
+                myoptions.AddPolicy("MyCorsPolicy", myBuilder =>
+                myBuilder.AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowAnyOrigin());
+            });
+        }
     }

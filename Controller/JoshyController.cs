@@ -9,7 +9,7 @@ using Joshy_api.Repository;
 
 namespace Joshy_api.Controller;
 
-    [Route("/OnX")]
+    [Route("[controller]")]
     [ApiController]
     public class JoshyController : ControllerBase
     {
@@ -19,9 +19,9 @@ namespace Joshy_api.Controller;
             _repo = repo;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "/OnX")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<User>))]
-        public IActionResult GetUser()
+        public IActionResult GetUsers()
         {
             var users = _repo.GetUsers();
             if(!ModelState.IsValid)
@@ -29,4 +29,47 @@ namespace Joshy_api.Controller;
             return Ok(users);
         }
 
+        [HttpGet("/OnXId")]
+        public IActionResult GetUserById(Guid Id)
+        {
+            var user = _repo.GetUser(Id);
+            if(!_repo.UserExists(Id))
+            {
+                return NotFound();
+            }
+            if(!ModelState.IsValid)
+            {
+                return  BadRequest(ModelState);
+            }
+            return Ok(user);
+        }
+
+        // [HttpGet(Name = "Id")]
+        // [ProducesResponseType(200, Type = typeof(User))]
+        // [ProducesResponseType(400)]
+        // public IActionResult GetUserId(Guid Id)
+        // {
+        //     var user = _repo.GetUser(Id);
+
+        //     if(!_repo.UserExists(Id))
+        //        return NotFound();
+
+        //     if(!ModelState.IsValid)
+        //         return BadRequest(ModelState);
+        //     return Ok(user);
+        // }
+
+        
+        // [HttpGet(Name = "Id")]
+        // [ProducesResponseType(200, Type = typeof(decimal))]
+        // public IActionResult GetPrice(Guid Id)
+        // {
+        //     if(!_repo.UserExists(Id))
+        //        return NotFound();
+        //     var price = _repo.Price(Id);
+        //     if(!ModelState.IsValid)
+        //         return BadRequest(ModelState);
+
+        //     return Ok(price);
+        // }
     }

@@ -13,4 +13,4 @@ namespace Joshy_api.Models
         public Products? Product{get; set;}
         public Order? Order{get; set;}
     }
-}
+} 
