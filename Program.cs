@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Joshy_api.Models;
 using Joshy_api.Repository;
 using Joshy_api.Interface;
+using Microsoft.AspNetCore.Cors;
 // using JoshyDbContext context = new JoshyDbContext();
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,8 +35,12 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.MapGet("/error", () => Results.Problem());
-app.MapGet("/error/test", () => {throw new Exception("Errorrrrr....");});
+app.MapGet("/error", 
+[EnableCors("MyCorsPolicy")]
+() => Results.Problem());
+app.MapGet("/error/test", 
+[EnableCors("MyCorsPolicy")]
+() => {throw new Exception("Errorrrrr....");});
 
 app.MapControllers();
 
