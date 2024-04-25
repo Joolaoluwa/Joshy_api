@@ -6,6 +6,7 @@ using Joshy_api.Models;
 using Joshy_api.Repository;
 using Joshy_api.Interface;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 // using JoshyDbContext context = new JoshyDbContext();
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,10 +38,38 @@ app.UseStaticFiles();
 
 app.MapGet("/error", 
 [EnableCors("MyCorsPolicy")]
+[ResponseCache(NoStore = true)]
 () => Results.Problem());
 app.MapGet("/error/test", 
 [EnableCors("MyCorsPolicy")]
+[ResponseCache(NoStore = true)]
 () => {throw new Exception("Errorrrrr....");});
+
+app.MapGet("/cod/test",
+[EnableCors("MyCorsPolicy")]
+[ResponseCache(NoStore = true)]
+() => 
+Results.Text(
+//         "<script>"
+//     + "window.alert('Your client supports Javascript"
+//     + "\\r\\n\\r\\n"
+//     + $"Server Time(UTC): {DateTime.UtcNow.ToString("o")}"
+//     + "\\r\\n"
+//     + "Client Time (UTC): ' + new Date().toISOString());"
+//     + "</script>"
+//     +"<noscript>Your client does not support JavaScript</noscript>",
+// "text/html"
+    "<script>"
+    +"window.alert('Your client supports Javascript"
+    +"\\r\\n\\r\\n"
+    +$"Server time(UTC): {DateTime.UtcNow.ToString("o")}"
+    +"\\r\\n"
+    +"Client time(UTC): ' + new Date().toISOString());"
+    +"</script>"
+    +"<noscript> Your client doesn't support Javascript </noscript>",
+    "text/html"
+));
+
 
 app.MapControllers();
 

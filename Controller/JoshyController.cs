@@ -11,6 +11,7 @@ namespace Joshy_api.Controller;
 
     [Route("[controller]")]
     [ApiController]
+    [ResponseCache(Location = ResponseCacheLocation.Any, Duration = 120)]
     public class JoshyController : ControllerBase
     {
         private readonly OnXRepository _repo;

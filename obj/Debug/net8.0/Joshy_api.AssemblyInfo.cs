@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Joshy_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a3a6a2f6cd08457514844e0df91c2549e4eb728")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+573380513f660ff271e3380028e60e0b818f9278")]
 [assembly: System.Reflection.AssemblyProductAttribute("Joshy_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Joshy_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
